@@ -1,0 +1,13 @@
+img{
+    display: block;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+.navside{
+    background-color: white;
+    border-right: 1px solid rgba(0, 0, 0, 0.281);
+    height: 100vh;
+    padding: 1em;
+    width: fit-content;
+
+}

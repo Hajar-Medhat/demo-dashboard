@@ -1,0 +1,13 @@
+.contanier{
+  display: flex;
+  /* grid-template-areas: "sn fh ,sn"; */
+}
+Header{
+  grid-area: "fh";
+}
+Sidenav{
+  grid-area: "sn";
+}
+html{
+  width: 100vw;
+}
