@@ -1,13 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+
 .contanier{
   display: flex;
-  /* grid-template-areas: "sn fh ,sn"; */
 }
-Header{
-  grid-area: "fh";
+
+
+.mini-contanier{
+display: flex;
+flex-direction: column;
 }
-Sidenav{
-  grid-area: "sn";
-}
-html{
-  width: 100vw;
+
+*{
+  font-family: Amiko;
 }

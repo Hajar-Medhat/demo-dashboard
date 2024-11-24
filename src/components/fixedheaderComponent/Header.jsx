@@ -4,10 +4,12 @@ import '../../components/fixedheaderComponent/Header.css';
 
 function Header() {
   return (
+    <>
     <div className='header'>
         <p className='title'>IT Asset Management</p>
         <img  className="imgprofile" src={profilelogo} alt="" />
     </div>
+    </>
   )
 }
 
