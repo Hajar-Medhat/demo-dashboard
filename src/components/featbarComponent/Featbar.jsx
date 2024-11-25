@@ -1,0 +1,45 @@
+import React from 'react'
+import'../featbarComponent/featbar.css'
+import userblogo from '../../../src/assets/userblack.svg';
+import excellogo from '../../../src/assets/excel.svg';
+import first from '../../../src/assets/dop.svg';
+import second from '../../../src/assets/filter.svg';
+import third from '../../../src/assets/sort.svg';
+import fourth from '../../../src/assets/sowhide.svg';
+import fifth from '../../../src/assets/adduser.svg';
+import logo6 from '../../../src/assets/searchblue.svg';
+
+function Featbar() {
+  return (
+    <div className='contain-feat'>
+        <ul>
+            <li>
+                <img src={userblogo} alt="" />
+                all users  <img src={first} alt="" style={{"marginLeft":"1em"}} />
+            </li>
+            <li>
+            <img src={second} alt="" />
+                filter
+            </li>
+            <li><img src={third} alt="" />
+            sort</li>
+            <li><img src={fourth} alt="" />
+                show & hide columns
+            </li>
+            <li>
+            <img src={fifth} alt="" />
+             add a new user
+            </li>
+            <li>
+                <img src={logo6} alt="" style={{"marginRight":"-2.7em","zIndex":"1"}} />
+                <input className='seachnav' type="text" placeholder='Search Device, Employee Name, Employee ID .. etc' />
+            </li>
+            <li>
+                <img src={excellogo} alt="" />
+            </li>
+        </ul>
+    </div>
+  )
+}
+
+export default Featbar

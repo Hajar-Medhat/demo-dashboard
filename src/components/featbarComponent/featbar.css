@@ -1,0 +1,50 @@
+.contain-feat >ul{
+    display: flex;
+    list-style-type:none;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+}
+.seachnav{
+    background-color: white;
+    border-radius: 20px;
+    width: 20vw;
+    padding: 0.6em;
+    margin: 0px;
+}
+.contain-feat{
+    background-color: #F5F5F5;
+    margin: 0.3em;
+    padding: 0.2em;
+    width: 96.55vw;
+
+
+}
+.contain-feat>ul>li{
+    background-color: transparent !important;
+    display: flex;
+    align-items: center;
+    font-family: Amiko;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: -1px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+text-transform: capitalize;
+
+
+}
+
+ li>::placeholder{
+    font-family: Trebuchet MS;
+font-size: 10px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: -0.10000000149011612px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+padding-left: 3em;
+
+}

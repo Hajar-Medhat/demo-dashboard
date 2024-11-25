@@ -1,5 +1,6 @@
 import './App.css'
 import Sidenav from './components/sidenavComponent/sidenav';
+import Featbar from './components/featbarComponent/Featbar';
 import Headerw from './components/fixedheaderComponent/Header';
 import Secondbar from './components/secondbarComponent/Secondbar';
 import userDate from './userdata.json'
@@ -22,7 +23,7 @@ const columns = useMemo(()=>[
   },
 ],[]);
 
-// const [show, setShow] = useState("hide");
+const [checked, setChecked] = useState(false);
 const handleToggleOption = (e) => {
   if(e.target.className=="hide"){
   e.target.className="show";}
@@ -40,13 +41,19 @@ const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTa
     <Headerw />
     <div className="cont-with-table">
     <Secondbar/>
+    <div className="withnot-secondnav">
+      <Featbar/>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map((headerGroup)=>(
         <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column)=>(
               <th {...column.getHeaderProps()}>
-               {column.render("Header")}
+                <div className="selectall">
+                <label htmlFor={column.render("Header")}>
+                    {column.render("Header")!="Notes"?<input type="checkbox" style={{"width":"fit-content","margin-right":"1em"}} checked={checked} onChange={() => setChecked(!checked)}/>:""}                                          
+                          {column.render("Header")}
+                      </label></div>
               </th>
             ))}
         </tr>
@@ -60,7 +67,9 @@ const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTa
     <tr {...row.getRowProps()}>
       {row.cells.map((cell) =>(
     <td {...cell.getCellProps()}>
-      {cell.render("Cell")}
+      <div className="sected">
+      <label >{cell.render("Cell").props.cell.value!="-"?<input type="checkbox" checked={checked} style={{"width":"fit-content","margin-right":"1em"}} />:""}
+      {(cell.render("Cell"))}</label></div>
     </td>))}
     <p className="hide"  onClick={e=>handleToggleOption(e)}>⠸
 <div ><ul>
@@ -79,6 +88,7 @@ const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTa
       </tbody>
     </table>
 
+    </div>
     </div>
     </div>
 
