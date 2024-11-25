@@ -58,9 +58,10 @@ input{
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     background-color: white;
-    padding: 0.5em ;
+    padding: 0.2em ;
     display: flex;
     gap: 0.5em;
+    margin-bottom: 0.5em;
     
 }
 
