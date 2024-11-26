@@ -15,23 +15,23 @@ function Featbar() {
         <ul>
             <li>
                 <img src={userblogo} alt="" />
-                all users  <img src={first} alt="" style={{"marginLeft":"1em"}} />
+                All users  <img src={first} alt="" style={{"marginLeft":"1em"}} />
             </li>
             <li>
             <img src={second} alt="" />
-                filter
+                Filter
             </li>
             <li><img src={third} alt="" />
             sort</li>
             <li><img src={fourth} alt="" />
-                show & hide columns
+                Show & Hide columns
             </li>
             <li>
             <img src={fifth} alt="" />
-             add a new user
+             Add a new user
             </li>
             <li>
-                <img src={logo6} alt="" style={{"marginRight":"-2.7em","zIndex":"1"}} />
+                <img src={logo6} alt="" style={{"marginRight":"-2.7em","zIndex":"0"}} />
                 <input className='seachnav' type="text" placeholder='Search Device, Employee Name, Employee ID .. etc' />
             </li>
             <li>

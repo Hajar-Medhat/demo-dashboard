@@ -9,5 +9,7 @@ img{
     height: 100vh;
     padding: 1em;
     width: fit-content;
+    position: sticky;
+    top: 0px;
 
 }

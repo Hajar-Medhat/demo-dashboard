@@ -3,6 +3,7 @@ import Sidenav from './components/sidenavComponent/sidenav';
 import Featbar from './components/featbarComponent/Featbar';
 import Headerw from './components/fixedheaderComponent/Header';
 import Secondbar from './components/secondbarComponent/Secondbar';
+import fifth from './assets/adduser.svg';
 import userDate from './userdata.json'
 import { useTable } from 'react-table';
 import { useMemo, useState } from 'react';
@@ -24,6 +25,7 @@ const columns = useMemo(()=>[
 ],[]);
 
 const [checked, setChecked] = useState(false);
+const [edit, setEdit] = useState(false);
 const handleToggleOption = (e) => {
   if(e.target.className=="hide"){
   e.target.className="show";}
@@ -75,7 +77,7 @@ const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTa
 <div ><ul>
   <li style={{"backgroundColor":"#EEF6FF","color":"#0038BA"}}>actions</li>
   <li> <img src={oneimg} alt="" />view</li>
-  <li> <img src={twoimg} alt="" />edit</li>
+  <li onClick={()=>setEdit(!edit)}>  <img src={twoimg} alt="" />edit</li>
   <li style={{"backgroundColor":"#FFF2F0","color":"#E2341D"}}>
     <img src={threeimg} alt="" />
     delete</li>
@@ -89,6 +91,18 @@ const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTa
     </table>
 
     </div>
+    <div className={edit?"showedit":"hideedit"}>
+      <div className="edit">   
+                 <img src={fifth} alt="" />
+                 Edit a user
+                 </div>
+  <label className ="lbedit" htmlFor="name">Name<input type="text" />
+  </label>
+   <label className ="lbedit" htmlFor="email"> Email<input type="text" /></label>
+<div className="btns">  <button className='no' onClick={()=>setEdit(!edit)}>cancel</button>
+<button className="ok">Add Use</button></div>
+</div>
+
     </div>
     </div>
 
