@@ -47,3 +47,8 @@ text-decoration-skip-ink: none;
 padding-left: 3em;
 
 }
+
+.featuls>li:hover {
+    color :#006192;
+    cursor: pointer;
+}

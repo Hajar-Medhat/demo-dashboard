@@ -70,3 +70,6 @@ input{
     background-color: #EBF7FF;
     ;
 }
+.secondmenu>li:hover{
+    background-color: #FFF7B0;
+}

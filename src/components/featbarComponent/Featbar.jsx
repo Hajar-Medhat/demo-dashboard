@@ -9,10 +9,10 @@ import fourth from '../../../src/assets/sowhide.svg';
 import fifth from '../../../src/assets/adduser.svg';
 import logo6 from '../../../src/assets/searchblue.svg';
 
-function Featbar() {
+function Featbar(props) {
   return (
     <div className='contain-feat'>
-        <ul>
+        <ul className='featuls'>
             <li>
                 <img src={userblogo} alt="" />
                 All users  <img src={first} alt="" style={{"marginLeft":"1em"}} />
@@ -26,7 +26,7 @@ function Featbar() {
             <li><img src={fourth} alt="" />
                 Show & Hide columns
             </li>
-            <li>
+            <li onClick={()=>{props.setEdit(!props.edit);props.setText("add user");props.setTitleText("Add a user");props.setValue("")}}>
             <img src={fifth} alt="" />
              Add a new user
             </li>
