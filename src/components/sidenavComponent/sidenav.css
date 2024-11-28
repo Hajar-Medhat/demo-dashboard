@@ -2,6 +2,7 @@ img{
     display: block;
     margin-bottom: 2em;
     cursor: pointer;
+
 }
 .navside{
     background-color: white;
@@ -12,4 +13,8 @@ img{
     position: sticky;
     top: 0px;
 
+}
+.navside>img:hover{
+border-bottom: 3px solid #037ED1;
+padding-bottom: 5px;
 }

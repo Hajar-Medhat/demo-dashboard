@@ -8,8 +8,10 @@ import third from '../../../src/assets/sort.svg';
 import fourth from '../../../src/assets/sowhide.svg';
 import fifth from '../../../src/assets/adduser.svg';
 import logo6 from '../../../src/assets/searchblue.svg';
+import { DownloadTableExcel } from 'react-export-table-to-excel';
 
 function Featbar(props) {
+
   return (
     <div className='contain-feat'>
         <ul className='featuls'>
@@ -34,8 +36,16 @@ function Featbar(props) {
                 <img src={logo6} alt="" style={{"marginRight":"-2.7em","zIndex":"0"}} />
                 <input className='seachnav' type="text" placeholder='Search Device, Employee Name, Employee ID .. etc' />
             </li>
-            <li>
-                <img src={excellogo} alt="" />
+            <li >
+            <DownloadTableExcel 
+                    filename="users table"
+                    sheet="users"
+                    currentTableRef={props.tableRef.current}
+                >
+
+                <img src={excellogo} alt="" style={{"margin":"0"}}/>
+                </DownloadTableExcel>
+
             </li>
         </ul>
     </div>

@@ -13,7 +13,7 @@ function Window(props) {
   </label>
    <label className ="lbedit" htmlFor="email"> Email<input type="text" /></label>
 <div className="btns">  <button className='no' onClick={()=>props.setEdit(!props.edit)}>cancel</button>
-<button className="ok">{props.text}</button></div>
+<button className="ok" >{props.text}</button></div>
 </div>
 
   )
